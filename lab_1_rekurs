@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double func(int a,int x,int m)
+{
+  if (m==0)
+		{
+			return sin(a*x)/a;
+		}
+	else
+		{
+			return pow(x,m)/a*sin(a*x)+m/a*func(a,x,m-1);
+		}
+}
+
+
+void main()
+{
+int x,a,m;
+cout<<"vvedite a,x,m"<<endl;
+cin>>a>>x>>m;
+cout<<endl<<func(a,x,m)<<endl;
+system("pause");
+}
